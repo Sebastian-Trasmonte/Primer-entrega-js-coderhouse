@@ -4,6 +4,7 @@ function PedirNombre() {
 function PedirApellido() {
     return prompt("Ingrese su apellido").toLowerCase();
 }
+const AnioActual = parseInt(2023);
 alert("Hola, para comenzar necesitamos algunos datos. Ingreselos a continuacion.")
 let nombre = PedirNombre()
 while (!isNaN(nombre)) {
@@ -19,5 +20,11 @@ while (!isNaN(apellido)) {
 alert("Su nombre completo es " + nombre.charAt(0).toUpperCase() + nombre.slice(1) + " " +
     apellido.charAt(0).toUpperCase() + apellido.slice(1));
 
-// alert("Continumaos con tu edad. A continuacion te haremos unas preguntas para averiguarla.")
-// let edad = number(promp("Ingrese"))
+alert("Ahora trataremos de calcular tu edad en base al año de nacimiento que ingreses")
+let anio = parseInt(prompt("ingresa tu año de nacimiento"))
+while (anio >= 2023 || anio <= 0) {
+    alert("tu año de nacimiento tiene que ser mayor a 0 y menor a 2023")
+    anio = parseInt(prompt("ingresa tu año de nacimiento"))
+}
+let edad = AnioActual - anio
+alert("tu año de nacimiento es " + anio + ", por lo tanto tu edad aproximada es de " + edad + " años")
