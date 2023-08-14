@@ -28,3 +28,6 @@ while (anio >= 2023 || anio <= 0) {
 }
 let edad = AnioActual - anio
 alert("tu año de nacimiento es " + anio + ", por lo tanto tu edad aproximada es de " + edad + " años")
+alert("Tus datos quedaron registrados de la siguiente manera \nNombre: " +
+    nombre.charAt(0).toUpperCase() + nombre.slice(1) +
+    "\nApellido: " + apellido.charAt(0).toUpperCase() + apellido.slice(1) + "\nEdad: " + edad + " Años")
